@@ -1,0 +1,34 @@
+.home {
+    width: 95%;
+    margin: auto;
+
+
+}
+
+.search_box {
+    /* border: 1px solid ; */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+   padding: 20px;
+
+}
+
+.home__container {
+    background-color: #5D5DFF;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding-bottom: 50px;
+
+}
+@media only screen and (max-width:425px){
+   .home{
+    width: 98%;
+   } 
+   .search_box{
+    padding-left: 0px;
+   padding-right: 0px;
+   }
+}
