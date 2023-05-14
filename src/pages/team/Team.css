@@ -5,15 +5,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    min-height: 100vh;
     padding-top: 50px;
     /* background-color: #5D5DFF; */
+    align-items: flex-start;
 
 }
 .team_main{
     width: 95%;
     margin: auto;
     background-color: #5D5DFF;
+    min-height: 100vh;
+    padding-bottom: 50px;
+
 
 }
 .team_main h1{

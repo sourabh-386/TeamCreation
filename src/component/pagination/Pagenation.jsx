@@ -57,7 +57,7 @@ export const Pagenation = () => {
             <p
             className='other_btn'
                 onClick={() => dispatch(contentOnPage(pageno + 1))}
-                style={pageno === pages-1 ? { display: 'none' } : { display: 'flex' }}
+                style={pageno === pages-1 || pages===0? { display: 'none' } : { display: 'flex' }}
 
             >
                 Next

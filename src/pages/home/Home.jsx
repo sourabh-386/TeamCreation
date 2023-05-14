@@ -11,7 +11,7 @@ const Home = () => {
             <br />
             <br />
             <br />
-            
+
             <div className="search_box">
                 <Search />
                 <Filter />
@@ -19,7 +19,7 @@ const Home = () => {
             <div className='home__container'>
 
 
-
+                <center className='home_head'><h1>Create Your Team</h1></center>
                 <Users />
                 <br />
                 <br />

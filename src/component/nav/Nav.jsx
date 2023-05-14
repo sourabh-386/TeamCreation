@@ -14,15 +14,15 @@ const Nav = () => {
   return (
 
     <div className='nav'>
-      <Link to='/' className='links' >Home</Link>
-      <div className='my_team'>
-        <Link to='/team' className='links' >My-Team</Link>
+      <Link to='/' className='links links1' >Home</Link>
+      
+        <Link to='/team' className='links' >Team</Link>
         {Object.keys(team).length!==0 ?
           <p className='my_team_no'>{Object.keys(team).length}</p>
           :
           ''
         }
-      </div>
+      
 
 
     </div>

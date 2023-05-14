@@ -4,6 +4,14 @@
 
 
 }
+.home_head{
+    padding-bottom: 20px;
+    padding-top: 30px;
+    width: 340px;
+    margin: auto;
+    border-bottom: 2px solid;
+    color: white;
+}
 
 .search_box {
     /* border: 1px solid ; */
@@ -12,7 +20,8 @@
     justify-content: space-between;
     position: relative;
     align-items: center;
-   padding: 20px;
+    padding: 20px;
+
 
 }
 
@@ -23,12 +32,17 @@
     padding-bottom: 50px;
 
 }
-@media only screen and (max-width:425px){
-   .home{
-    width: 98%;
-   } 
-   .search_box{
-    padding-left: 0px;
-   padding-right: 0px;
-   }
+
+@media only screen and (max-width:400px) {
+    .home {
+        width: 98%;
+    }
+
+    .search_box {
+        padding-left: 0px;
+        padding-right: 0px;
+        justify-content: space-evenly;
+
+
+    }
 }

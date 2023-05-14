@@ -17,9 +17,9 @@ export const UserReducer = createSlice({
 
                 state.user = state.userList.filter((val) => { return (val.first_name.toUpperCase() === action.payload) })
             }
-            else{
+            else {
                 alert('user not found')
-                state.user=state.user
+                state.user = state.user
             }
 
         },

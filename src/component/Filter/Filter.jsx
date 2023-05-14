@@ -40,10 +40,10 @@ const Filter = () => {
 
   return (
     <>
-      <div className='filter' onClick={()=>set_filter_state(!filter_state)}>Filter <i class="bi bi-arrow-down-up"></i></div>
-      <form className='option' onSubmit={handleSubmit} style={filter_state?{display:'flex',flexDirection:'column'}:{display:'none'}}>
+      <div className='filter' onClick={() => set_filter_state(!filter_state)}>Filter <i class="bi bi-arrow-down-up"></i></div>
+      <form className='option' onSubmit={handleSubmit} style={filter_state ? { display: 'flex', flexDirection: 'column' } : { display: 'none' }}>
         <div className="option_gender">
-        <input type="radio" name="gender" value='All' onChange={handleChange} onBlur={handleBlur} />All
+          <input type="radio" name="gender" value='All' onChange={handleChange} onBlur={handleBlur} />All
 
           <input type="radio" name="gender" value='Male' onChange={handleChange} onBlur={handleBlur} />Male
           <input type="radio" name="gender" value='Female' onChange={handleChange} onBlur={handleBlur} />Female
@@ -56,6 +56,18 @@ const Filter = () => {
           <input type="checkbox" name="job" value="IT" onChange={handleChange} onBlur={handleBlur} />IT
           <input type="checkbox" name="job" value='Finance' onChange={handleChange} onBlur={handleBlur} />Finance
           <input type="checkbox" name="job" value='Management' onChange={handleChange} onBlur={handleBlur} />Management
+          <div >
+            <br />
+            <input type="checkbox" name="job" value="Sales" onChange={handleChange} onBlur={handleBlur} />Sales
+            <input type="checkbox" name="job" value="Finance" onChange={handleChange} onBlur={handleBlur} />Finance
+            <input type="checkbox" name="job" value="Marketing" onChange={handleChange} onBlur={handleBlur} />Marketing
+
+          </div>
+          <div>
+            <br />
+            <input type="checkbox" name="job" value="UI Designing" onChange={handleChange} onBlur={handleBlur} />UI Designing
+          </div>
+
         </div>
         <br />
 
@@ -72,7 +84,7 @@ const Filter = () => {
         <hr />
         <br />
 
-        <button type='submit' className='btn' onClick={()=>set_filter_state(!filter_state)}>Apply</button>
+        <button type='submit' className='btn' onClick={() => set_filter_state(!filter_state)}>Apply</button>
 
       </form>
     </>
