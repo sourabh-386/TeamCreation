@@ -1,5 +1,6 @@
 import React from 'react'
 import './Team.css'
+import teamimg from '../../image/teamwork.png'
 
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
@@ -25,7 +26,7 @@ const Team = () => {
         <center><h1>My-Team</h1></center>
         <div className='team_mem'>
 
-            {
+            {Object.keys(team).length!==0?
                 team.map((data) => {
                     return (
                         <div className="container">
@@ -49,6 +50,10 @@ const Team = () => {
                         </div>
                     )
                 })
+                :
+                <div>
+                    <img  className='team_img' src={teamimg} alt="img" />
+                </div>
             }
 
 

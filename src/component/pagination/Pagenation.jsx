@@ -9,12 +9,9 @@ export const Pagenation = () => {
 
     const users = useSelector(state => state.UserReducer.user)
     const pageno = useSelector(state => state.UserReducer.pageNo)
-
     const dispatch = useDispatch()
 
     let pages = Math.round((Object.keys(users).length) / 20)
-
-
 
     const content = []
 
@@ -29,15 +26,28 @@ export const Pagenation = () => {
 
     const changepage = (val) => {
         dispatch(contentOnPage(Number(val)))
-        console.log(pageno)
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
     }
+
+
+
+
 
 
     return (
         <div className='pagination'>
             <p
-            className='other_btn'
-                onClick={() => dispatch(contentOnPage(pageno - 1))}
+                className='other_btn'
+                onClick={() => {
+                    dispatch(contentOnPage(pageno - 1))
+                    window.scroll({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }}
                 style={pageno === 0 ? { display: 'none' } : { display: 'flex' }}
             >
                 Prev
@@ -47,7 +57,7 @@ export const Pagenation = () => {
                     .keys(content)
                     .slice(pageno, pageno + 5)
                     .map((val) => <p
-                    className='main_btn'
+                        className='main_btn'
                         onClick={() => { changepage(val) }}
                         style={(pageno) === Number(val) ? { backgroundColor: "yellow", color: 'black' } : { backgroundColor: "#efefef", color: 'black' }}
                     >
@@ -55,9 +65,16 @@ export const Pagenation = () => {
                     </p>)
             }
             <p
-            className='other_btn'
-                onClick={() => dispatch(contentOnPage(pageno + 1))}
-                style={pageno === pages-1 || pages===0? { display: 'none' } : { display: 'flex' }}
+                className='other_btn'
+                onClick={() => {
+                    dispatch(contentOnPage(pageno + 1))
+                    window.scroll({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+
+                }}
+                style={pageno === pages - 1 || pages === 0 ? { display: 'none' } : { display: 'flex' }}
 
             >
                 Next
